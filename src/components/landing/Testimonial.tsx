@@ -1,4 +1,7 @@
+
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Star } from "lucide-react";
 
 interface TestimonialData {
   quote: string;
@@ -35,63 +38,93 @@ const testimonials: TestimonialData[] = [
 export const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const nextTestimonial = () => {
+    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevTestimonial = () => {
+    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  };
+
   return (
-    <section className="bg-[rgba(56,70,116,1)] min-h-[540px] w-full overflow-hidden pt-[136px] pb-[81px] px-16 max-md:max-w-full max-md:pt-[100px] max-md:px-5">
-      <div className="w-full max-md:max-w-full">
-        <div className="flex w-full items-center max-md:max-w-full">
-          <div className="self-stretch flex min-w-60 flex-col overflow-hidden items-center w-[1312px] my-auto max-md:max-w-full">
-            <div className="flex w-[768px] max-w-full flex-col overflow-hidden items-center">
-              <div className="flex gap-1 overflow-hidden">
-                {[...Array(5)].map((_, i) => (
-                  <img
-                    key={i}
-                    src={`URL_${21 + i}`}
-                    alt="Star"
-                    className="aspect-[1.05] object-contain w-5 shrink-0"
-                  />
-                ))}
-              </div>
-              <blockquote className="self-stretch text-white text-center text-2xl font-bold leading-[34px] mt-8 max-md:max-w-full">
-                &quot;{testimonials[currentIndex].quote}&quot;
-              </blockquote>
-              <div className="flex items-center gap-5 text-base text-white mt-8">
-                <img
-                  src={testimonials[currentIndex].avatar}
-                  alt={testimonials[currentIndex].author}
-                  className="aspect-[1] object-contain w-14 self-stretch shrink-0 my-auto rounded-[50%]"
-                />
-                <div className="self-stretch my-auto">
-                  <div className="font-semibold">
-                    {testimonials[currentIndex].author}
-                  </div>
-                  <div className="font-normal">
-                    {testimonials[currentIndex].role}
-                  </div>
-                </div>
-                {testimonials[currentIndex].companyLogo && (
-                  <img
-                    src={testimonials[currentIndex].companyLogo}
-                    alt="Company logo"
-                    className="aspect-[1.03] object-contain w-16 self-stretch shrink-0 my-auto"
-                  />
-                )}
-              </div>
-            </div>
+    <section className="bg-[rgba(56,70,116,1)] w-full py-24 relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-0 w-20 h-20 rounded-full bg-white -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-32 h-32 rounded-full bg-white translate-x-1/2 translate-y-1/2"></div>
+      </div>
+      
+      <div className="max-w-4xl mx-auto px-6 md:px-16 relative z-10">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center"
+        >
+          <div className="flex gap-1 justify-center mb-8">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} fill="#FFD700" color="#FFD700" size={24} />
+            ))}
           </div>
-        </div>
-        <div className="flex w-full gap-[9px] justify-center flex-wrap mt-12 p-2.5 max-md:max-w-full max-md:mt-10">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-[50%] ${
-                index === currentIndex
-                  ? "bg-[rgba(109,141,176,1)]"
-                  : "bg-[rgba(204,204,204,1)]"
-              }`}
-              aria-label={`Go to testimonial ${index + 1}`}
+          
+          <blockquote className="text-white text-center text-xl md:text-2xl font-medium italic leading-relaxed mb-8">
+            "{testimonials[currentIndex].quote}"
+          </blockquote>
+          
+          <div className="flex items-center gap-4">
+            <img
+              src={testimonials[currentIndex].avatar}
+              alt={testimonials[currentIndex].author}
+              className="w-16 h-16 rounded-full object-cover border-2 border-white/20"
             />
-          ))}
+            <div className="text-white">
+              <div className="font-bold text-lg">{testimonials[currentIndex].author}</div>
+              <div className="text-white/80">{testimonials[currentIndex].role}</div>
+            </div>
+            {testimonials[currentIndex].companyLogo && (
+              <img
+                src={testimonials[currentIndex].companyLogo}
+                alt="Company logo"
+                className="w-16 h-auto ml-4"
+              />
+            )}
+          </div>
+        </motion.div>
+        
+        {/* Navigation controls */}
+        <div className="flex justify-between items-center mt-12">
+          <button 
+            onClick={prevTestimonial} 
+            aria-label="Previous testimonial"
+            className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+          >
+            ←
+          </button>
+          
+          <div className="flex gap-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  index === currentIndex
+                    ? "bg-[rgba(109,141,176,1)] w-8"
+                    : "bg-white/30"
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
+          
+          <button 
+            onClick={nextTestimonial} 
+            aria-label="Next testimonial"
+            className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+          >
+            →
+          </button>
         </div>
       </div>
     </section>
