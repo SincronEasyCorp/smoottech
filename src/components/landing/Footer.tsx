@@ -48,7 +48,7 @@ export const Footer = () => {
         </div>
         
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm mb-4 md:mb-0">© 2023 SmootTech. Todos os direitos reservados.</p>
+          <p className="text-sm mb-4 md:mb-0">© 2025 SmootTech. Todos os direitos reservados.</p>
           
           <div className="flex space-x-4">
             <a href="#" className="text-white/70 hover:text-white transition-colors">
