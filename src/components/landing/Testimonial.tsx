@@ -77,7 +77,7 @@ export const Testimonial = () => {
             <img
               src={testimonials[currentIndex].avatar}
               alt={testimonials[currentIndex].author}
-              className="w-16 h-16 rounded-full object-cover border-2 border-white/20"
+              className="w-16 h-16 rounded-full object-cover"
             />
             <div className="text-white">
               <div className="font-bold text-lg">{testimonials[currentIndex].author}</div>

@@ -40,7 +40,7 @@ export const Hero = () => {
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/fa10190ea77fd2c4f845cc3f2a30a7c1665da79259789e9655a8349b5d932b25?placeholderIfAbsent=true"
           alt="Platform Preview"
-          className="w-full h-auto object-contain rounded-lg shadow-2xl"
+          className="w-full h-auto object-contain"
         />
         <div className="absolute -bottom-3 -left-3 -right-3 h-12 bg-gradient-to-t from-[rgba(56,70,116,1)] to-transparent"></div>
       </motion.div>

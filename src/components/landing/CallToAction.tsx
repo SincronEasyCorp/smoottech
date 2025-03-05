@@ -6,9 +6,6 @@ export const CallToAction = () => {
   const handleContact = () => {
     // Implement contact functionality
     console.log("Contact specialist clicked");
-    
-    // Exemplo de scroll para formulário de contato ou abertura de modal
-    // document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -65,7 +62,7 @@ export const CallToAction = () => {
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/7ca8def902c57abb5ed46812411d9e0e88bd1356e4e1269efcc5f981beb94395?placeholderIfAbsent=true"
               alt="Business transformation"
-              className="max-w-full h-auto rounded-lg shadow-2xl"
+              className="max-w-full h-auto"
             />
           </motion.div>
         </div>
