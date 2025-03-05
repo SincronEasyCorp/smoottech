@@ -38,18 +38,6 @@ export const ProductSection: React.FC<ProductSectionProps> = ({
           >
             <h2 className="text-3xl md:text-[40px] font-bold leading-tight">{title}</h2>
             <p className="text-lg mt-6 leading-relaxed opacity-90">{description}</p>
-            
-            <motion.button 
-              className={`mt-8 px-6 py-3 rounded-md font-medium transition-all ${
-                darkBackground 
-                  ? "bg-white text-[rgba(56,70,116,1)] hover:bg-white/90" 
-                  : "bg-[rgba(56,70,116,1)] text-white hover:bg-[rgba(56,70,116,0.9)]"
-              }`}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Saiba mais
-            </motion.button>
           </motion.div>
           
           <motion.div 

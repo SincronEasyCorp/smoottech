@@ -20,15 +20,6 @@ export const Hero = () => {
         <p className="mt-6 text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
           Simplifique operações, encante clientes e eleve seus resultados com nossa plataforma completa.
         </p>
-        
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-[rgba(56,70,116,1)] font-medium px-6 py-3 rounded-md hover:bg-white/90 transition-all">
-            Demonstração gratuita
-          </button>
-          <button className="bg-transparent border border-white text-white font-medium px-6 py-3 rounded-md hover:bg-white/10 transition-all">
-            Saiba mais
-          </button>
-        </div>
       </motion.div>
       
       <motion.div
