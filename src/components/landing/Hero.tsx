@@ -27,9 +27,9 @@ export const Hero = () => {
         }
       >
         <img
-          src="/lovable-uploads/d4f6ceec-3083-4a3c-8b7b-316dca479704.png"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/fa10190ea77fd2c4f845cc3f2a30a7c1665da79259789e9655a8349b5d932b25?placeholderIfAbsent=true"
           alt="Platform Preview"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
       </ContainerScroll>
     </section>
