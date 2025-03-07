@@ -17,7 +17,7 @@ export const Navbar = () => {
     <nav 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out text-base text-white font-normal", 
-        isScrolled ? "bg-[rgba(33,37,41,0.95)] backdrop-blur-sm shadow-md py-2" : "bg-[rgba(33,37,41,1)] py-3"
+        isScrolled ? "bg-[#212529] shadow-md py-2" : "bg-[#212529] py-3"
       )}
     >
       <div className="flex min-h-[72px] w-full items-center justify-between flex-wrap px-6 md:px-16 max-w-7xl mx-auto">
