@@ -26,13 +26,11 @@ export const Hero = () => {
           </motion.div>
         }
       >
-        <div className="w-full h-full flex items-center justify-center bg-black">
-          <img
-            src="public/lovable-uploads/85a7fc6e-aa29-40ea-8f7d-7d14662f3025.png"
-            alt="Platform Preview"
-            className="w-full h-full object-contain p-1"
-          />
-        </div>
+        <img
+          src="public/lovable-uploads/3a430718-0af7-4a58-b985-2afc4d1a4be2.png"
+          alt="Platform Preview"
+          className="w-full h-full object-cover"
+        />
       </ContainerScroll>
     </section>
   );
