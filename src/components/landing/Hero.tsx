@@ -26,7 +26,7 @@ export const Hero = () => {
           </motion.div>
         }
       >
-        <div className="bg-black w-full h-full flex items-center justify-center p-4">
+        <div className="w-full h-full flex items-center justify-center p-4">
           <img
             src="/lovable-uploads/3a430718-0af7-4a58-b985-2afc4d1a4be2.png"
             alt="Platform Preview"
