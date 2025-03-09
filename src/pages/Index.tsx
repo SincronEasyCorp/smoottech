@@ -4,6 +4,7 @@ import { Navbar } from "@/components/landing/Navbar";
 import { Hero } from "@/components/landing/Hero";
 import { Features } from "@/components/landing/Features";
 import { ProductSection } from "@/components/landing/ProductSection";
+import { FeaturesGrid } from "@/components/landing/FeaturesGrid";
 import { Testimonial } from "@/components/landing/Testimonial";
 import { CallToAction } from "@/components/landing/CallToAction";
 import { Footer } from "@/components/landing/Footer";
@@ -48,6 +49,7 @@ const Index = () => {
           image="https://cdn.builder.io/api/v1/image/assets/TEMP/287b877c8fcb3c64388b07d452a728de456389fa4e08e94c8e94b979f4aebdfd?placeholderIfAbsent=true"
           imageAlt="Propósito SmootTech"
         />
+        <FeaturesGrid />
         <Testimonial />
         <CallToAction />
       </main>
