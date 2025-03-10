@@ -17,13 +17,15 @@ export const Footer = () => {
             </p>
           </div>
           
-          <div>
-            <h3 className="text-white font-medium mb-4">Legal</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">Termos de uso</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Política de privacidade</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Cookies</a></li>
-            </ul>
+          <div className="flex justify-start">
+            <div>
+              <h3 className="text-white font-medium mb-4">Legal</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="hover:text-white transition-colors">Termos de uso</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Política de privacidade</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Cookies</a></li>
+              </ul>
+            </div>
           </div>
         </div>
         
