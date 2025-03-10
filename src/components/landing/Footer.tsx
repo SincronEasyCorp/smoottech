@@ -1,20 +1,25 @@
-
 import React from "react";
-
 export const Footer = () => {
-  return (
-    <footer className="bg-[rgba(24,28,32,1)] text-white/70 py-12 px-6 md:px-16">
+  return <footer className="bg-[rgba(24,28,32,1)] text-white/70 py-12 px-6 md:px-16">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-1">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/43f85485977c1b53a32481a4f8d42803c7bf5d3f50e2998596fc205327d8ad28?placeholderIfAbsent=true"
-              alt="SmootTech Logo"
-              className="w-16 h-auto mb-4"
-            />
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/43f85485977c1b53a32481a4f8d42803c7bf5d3f50e2998596fc205327d8ad28?placeholderIfAbsent=true" alt="SmootTech Logo" className="w-16 h-auto mb-4" />
             <p className="text-sm max-w-xs">
               Soluções inovadoras para a gestão de bares, restaurantes e comércio.
             </p>
+          </div>
+          
+          
+          
+          <div>
+            <h3 className="text-white font-medium mb-4">Soluções</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-white transition-colors">PDV</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Gestão de estoque</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Fidelidade</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Relatórios</a></li>
+            </ul>
           </div>
           
           <div>
@@ -47,6 +52,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
