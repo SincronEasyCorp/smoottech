@@ -41,14 +41,6 @@ export const CallToAction = () => {
               >
                 Falar com um especialista
               </motion.button>
-              
-              <motion.button
-                className="bg-transparent border border-white/30 text-white font-medium px-6 py-3 rounded-md hover:bg-white/5 transition-all"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Ver demonstração
-              </motion.button>
             </div>
           </motion.div>
           
