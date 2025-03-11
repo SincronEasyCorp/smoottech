@@ -48,17 +48,14 @@ export const ProductSection: React.FC<ProductSectionProps> = ({
             viewport={{ once: true }}
           >
             <motion.div 
-              className="rounded-lg overflow-hidden shadow-xl"
-              whileHover={{ 
-                scale: 1.03,
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)"
-              }}
-              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <img
                 src={image}
                 alt={imageAlt}
-                className="w-full h-auto transform hover:scale-105 transition-transform duration-700"
+                className="w-full h-auto"
               />
             </motion.div>
           </motion.div>
