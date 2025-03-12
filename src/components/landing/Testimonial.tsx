@@ -74,7 +74,7 @@ export const Testimonial = () => {
             "{testimonials[currentIndex].quote}"
           </blockquote>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <div className="text-white text-center">
               <div className="font-bold text-lg">{testimonials[currentIndex].author}</div>
               <div className="text-white/80">{testimonials[currentIndex].role}</div>
@@ -83,7 +83,7 @@ export const Testimonial = () => {
               <img
                 src={testimonials[currentIndex].companyLogo}
                 alt="Company logo"
-                className="w-16 h-auto ml-4"
+                className="w-16 h-auto ml-1"
               />
             )}
           </div>
