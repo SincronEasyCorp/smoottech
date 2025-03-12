@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface TestimonialData {
   quote: string;
@@ -52,9 +52,16 @@ export const Testimonial = () => {
       
       <div className="max-w-4xl mx-auto px-6 md:px-16 relative z-10">
         {/* Section Title */}
-        <h2 className="text-white text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-white text-3xl md:text-4xl font-bold text-center mb-8">
           O Que Nossos Clientes Dizem
         </h2>
+        
+        {/* Stars */}
+        <div className="flex gap-1 justify-center mb-8">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} fill="#FFD700" color="#FFD700" size={24} />
+          ))}
+        </div>
         
         <motion.div
           key={currentIndex}
@@ -64,39 +71,33 @@ export const Testimonial = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center"
         >
-          <div className="flex gap-1 justify-center mb-8">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} fill="#FFD700" color="#FFD700" size={24} />
-            ))}
-          </div>
-          
           <blockquote className="text-white text-center text-xl md:text-2xl font-medium italic leading-relaxed mb-8">
             "{testimonials[currentIndex].quote}"
           </blockquote>
           
-          <div className="flex items-center gap-2">
-            <div className="text-white text-center">
-              <div className="font-bold text-lg">{testimonials[currentIndex].author}</div>
-              <div className="text-white/80">{testimonials[currentIndex].role}</div>
-            </div>
+          <div className="flex items-center justify-center mb-8">
             {testimonials[currentIndex].companyLogo && (
               <img
                 src={testimonials[currentIndex].companyLogo}
                 alt="Company logo"
-                className="w-16 h-auto ml-1"
+                className="w-14 h-14 rounded-md mr-4"
               />
             )}
+            <div className="text-white">
+              <div className="font-bold text-lg">{testimonials[currentIndex].author}</div>
+              <div className="text-white/80">{testimonials[currentIndex].role}</div>
+            </div>
           </div>
         </motion.div>
         
         {/* Navigation controls */}
-        <div className="flex justify-between items-center mt-12">
+        <div className="flex justify-between items-center mt-8">
           <button 
             onClick={prevTestimonial} 
             aria-label="Previous testimonial"
             className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
           >
-            ←
+            <ChevronLeft size={20} />
           </button>
           
           <div className="flex gap-2">
@@ -119,7 +120,7 @@ export const Testimonial = () => {
             aria-label="Next testimonial"
             className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
           >
-            →
+            <ChevronRight size={20} />
           </button>
         </div>
       </div>
