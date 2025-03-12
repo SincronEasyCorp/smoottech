@@ -7,7 +7,7 @@ interface TestimonialData {
   quote: string;
   author: string;
   role: string;
-  avatar: string;
+  avatar?: string;
   companyLogo?: string;
   rating: number;
 }
@@ -17,9 +17,7 @@ const testimonials: TestimonialData[] = [
     quote:
       "A SmootTech transformou a maneira como gerenciamos nosso restaurante. A agilidade e eficiência que está nos proporcionando são incomparáveis!",
     author: "Kevin Sena",
-    role: "Proprietário",
-    avatar:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/acb3dd7e0ae31acf0c1d760f9d2dcbdf450404ce998860824346882940d8efa1?placeholderIfAbsent=true",
+    role: "Proprietário da Take a Cake",
     companyLogo:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/4910d350cb6e8f08ad9900a8ab5784390d9637fa2579312bb3b52265b5ebe5a7?placeholderIfAbsent=true",
     rating: 5,
@@ -29,8 +27,6 @@ const testimonials: TestimonialData[] = [
       "Desde que começamos a usar o Smoottech, nossa produtividade aumentou significativamente. Recomendo para qualquer estabelecimento!",
     author: "João Silva",
     role: "Gerente",
-    avatar:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/ca046a62429c37a5d23bb1958ac42ad182f0ee37fd489e5948612e413e1fc012?placeholderIfAbsent=true",
     rating: 5,
   },
 ];
@@ -79,12 +75,7 @@ export const Testimonial = () => {
           </blockquote>
           
           <div className="flex items-center gap-4">
-            <img
-              src={testimonials[currentIndex].avatar}
-              alt={testimonials[currentIndex].author}
-              className="w-16 h-16 rounded-full object-cover"
-            />
-            <div className="text-white">
+            <div className="text-white text-center">
               <div className="font-bold text-lg">{testimonials[currentIndex].author}</div>
               <div className="text-white/80">{testimonials[currentIndex].role}</div>
             </div>
