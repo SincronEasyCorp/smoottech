@@ -31,10 +31,10 @@ export const ProductSection: React.FC<ProductSectionProps> = ({
       {/* Grade animada como fundo */}
       <AnimatedGridPattern
         numSquares={40}
-        maxOpacity={darkBackground ? 0.2 : 0.1}
+        maxOpacity={darkBackground ? 0.1 : 0.05}
         duration={5}
         repeatDelay={0.8}
-        className={`${darkBackground ? "fill-white/10 stroke-white/10" : "fill-[#384674]/10 stroke-[#384674]/10"} [mask-image:radial-gradient(circle_at_center,white,transparent_70%)]`}
+        className={`${darkBackground ? "fill-white/5 stroke-white/5" : "fill-[#384674]/5 stroke-[#384674]/5"} [mask-image:radial-gradient(circle_at_center,white,transparent_70%)]`}
       />
       
       <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10">
