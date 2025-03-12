@@ -65,7 +65,7 @@ export const ProductSection: React.FC<ProductSectionProps> = ({
               <img
                 src={image}
                 alt={imageAlt}
-                className="w-full h-auto"
+                className="w-[110%] h-auto"
               />
             </motion.div>
           </motion.div>
