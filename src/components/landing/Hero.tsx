@@ -27,11 +27,17 @@ export const Hero = () => {
         }
       >
         <div className="w-full h-full flex items-center justify-center p-4">
-          <img
-            src="/lovable-uploads/3a430718-0af7-4a58-b985-2afc4d1a4be2.png"
-            alt="Platform Preview"
-            className="max-w-full max-h-full object-contain"
-          />
+          <div className="relative w-full max-w-md overflow-hidden">
+            <img
+              src="/lovable-uploads/3a430718-0af7-4a58-b985-2afc4d1a4be2.png"
+              alt="Platform Preview"
+              className="w-full h-auto object-contain object-center md:object-fill"
+              style={{
+                maxHeight: "70vh",
+                objectPosition: "center",
+              }}
+            />
+          </div>
         </div>
       </ContainerScroll>
     </section>
