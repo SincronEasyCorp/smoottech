@@ -29,7 +29,7 @@ export const CallToAction = () => {
             
             <p className="text-white/80 text-lg md:text-xl mt-6 mb-8 max-w-lg">
               Leve seu negócio a um novo patamar de eficiência com a gente. 
-              Experimente por 14 dias sem compromisso.
+              Experimente por 30 dias sem compromisso.
             </p>
             
             <div className="flex flex-wrap gap-4">
