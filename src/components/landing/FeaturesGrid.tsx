@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { 
   Users, Tag, ShoppingCart, Printer, UserCog, 
-  Globe, Ticket, Utensils, Receipt, BarChart2, CreditCard 
+  Globe, Ticket, Utensils, Receipt, BarChart2, CreditCard, DollarSign
 } from "lucide-react";
 
 interface FeatureItemProps {
@@ -36,12 +36,13 @@ export const FeaturesGrid: React.FC = () => {
     { title: "Cadastro de Produtos", icon: <Tag size={22} className="text-[rgba(109,141,176,1)]" /> },
     { title: "Controle de Impressoras", icon: <Printer size={22} className="text-[rgba(109,141,176,1)]" /> },
     { title: "Controle de Usuários", icon: <UserCog size={22} className="text-[rgba(109,141,176,1)]" /> },
-    { title: "Cardápio na Internet", icon: <Globe size={22} className="text-[rgba(109,141,176,1)]" /> },
+    { title: "Cardápio Digital", icon: <Globe size={22} className="text-[rgba(109,141,176,1)]" /> },
     { title: "Cupons de Desconto", icon: <Ticket size={22} className="text-[rgba(109,141,176,1)]" /> },
     { title: "Monitor de Preparos (KDS)", icon: <Utensils size={22} className="text-[rgba(109,141,176,1)]" /> },
-    { title: "Emissor Cupom Fiscal (NFC-e)", icon: <Receipt size={22} className="text-[rgba(109,141,176,1)]" /> },
+    { title: "Emissor Nota Fiscal (NFC-e)", icon: <Receipt size={22} className="text-[rgba(109,141,176,1)]" /> },
     { title: "Relatórios e indicadores em tempo real", icon: <BarChart2 size={22} className="text-[rgba(109,141,176,1)]" /> },
     { title: "Gerente de Contas", icon: <CreditCard size={22} className="text-[rgba(109,141,176,1)]" /> },
+    { title: "Controle de Caixa", icon: <DollarSign size={22} className="text-[rgba(109,141,176,1)]" /> },
   ];
 
   return (
