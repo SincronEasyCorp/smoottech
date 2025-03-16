@@ -1,8 +1,9 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 export const Hero = () => {
-  return <section className="bg-[rgba(56,70,116,1)] flex w-full flex-col items-center pt-8 pb-8 px-6 md:px-16 max-w-full relative overflow-hidden">
+  return <section className="bg-[rgba(56,70,116,1)] flex w-full flex-col items-center pt-4 pb-8 px-6 md:px-16 max-w-full relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://cdn.builder.io/api/v1/image/assets/TEMP/0f9a7f5b59654d7b8b62f07f220dd8b2?apiKey=TEMP')] bg-cover bg-center opacity-10"></div>
       
       <ContainerScroll titleComponent={<motion.div className="max-w-4xl mx-auto text-center z-10 py-0 px-4" initial={{
