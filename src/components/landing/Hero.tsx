@@ -14,7 +14,7 @@ export const Hero = () => {
     }} transition={{
       duration: 0.6
     }}>
-            <h1 className="text-[26px] md:text-[32px] lg:text-[38px] text-white font-bold text-center tracking-[-0.68px] leading-tight mb-3">
+            <h1 className="text-[26px] md:text-[32px] text-white text-center tracking-[-0.68px] leading-tight mb-3 mx-0 font-bold px-px lg:text-4xl">
               Tecnologia inovadora para a <span className="text-[rgba(109,141,176,1)] px-0 font-extrabold">gestão do seu negócio</span>
             </h1>
             
