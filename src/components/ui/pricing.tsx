@@ -139,7 +139,7 @@ export function Pricing({
               </div>
 
               <p className="text-sm leading-5 text-white/80 mb-6">
-                {isMonthly ? "Cobrança mensal" : "Cobrança anual (equivalente a 10 meses)"}
+                {isMonthly ? "Cobrança mensal" : "Cobrança anual"}
               </p>
 
               {!isMonthly && (
