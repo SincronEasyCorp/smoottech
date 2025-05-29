@@ -6,6 +6,7 @@ import { Features } from "@/components/landing/Features";
 import { ProductSection } from "@/components/landing/ProductSection";
 import { FeaturesGrid } from "@/components/landing/FeaturesGrid";
 import { Testimonial } from "@/components/landing/Testimonial";
+import { PricingSection } from "@/components/landing/PricingSection";
 import { CallToAction } from "@/components/landing/CallToAction";
 import { Footer } from "@/components/landing/Footer";
 
@@ -51,6 +52,7 @@ const Index = () => {
         />
         <FeaturesGrid />
         <Testimonial />
+        <PricingSection />
         <CallToAction />
       </main>
       <Footer />
