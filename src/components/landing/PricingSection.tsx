@@ -26,14 +26,16 @@ const smoothTechPlans = [
     semestralPrice: "167", // 200 * 5 / 6 = 167
     period: "mês",
     features: [
-      "Todas as funcionalidades do Plano Pro",
-      "Integração com marketplaces (ex.: iFood)",
+      "Pedidos no balcão e em mesas",
+      "Gestão de delivery interna",
       "Cardápio digital (QR Code/Web)",
-      "Autoatendimento em totens",
-      "Comanda eletrônica (garçom mobile)",
       "Monitor de preparo (KDS)",
+      "Emissão de NFC-e / cupom fiscal",
+      "Controle de estoque",
+      "Relatórios e indicadores em tempo real",
       "Cupons de desconto e promoções",
-      "Programa de fidelidade (pontos)"
+      "Usuários ilimitados",
+      "Dispositivos/PDVs ilimitados"
     ],
     description: "Funcionalidades completas para máxima eficiência",
     buttonText: "Falar com Especialista",
