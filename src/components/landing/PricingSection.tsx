@@ -10,12 +10,8 @@ const smoothTechPlans = [
     semestralPrice: "125", // 150 * 5 / 6 = 125
     period: "mês",
     features: [
-      "Pedidos no balcão e em mesas",
-      "Gestão de delivery interna",
-      "Emissão de NFC-e / cupom fiscal",
-      "Controle de estoque",
-      "Relatórios e indicadores em tempo real",
-      "Versão gratuita/teste disponível"
+      "Usuários ilimitados",
+      "Dispositivos/PDVs ilimitados"
     ],
     description: "PDV Completo para seu estabelecimento",
     buttonText: "Começar Teste Grátis",
