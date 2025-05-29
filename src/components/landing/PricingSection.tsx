@@ -15,8 +15,6 @@ const smoothTechPlans = [
       "Emissão de NFC-e / cupom fiscal",
       "Controle de estoque",
       "Relatórios e indicadores em tempo real",
-      "Usuários ilimitados",
-      "Dispositivos/PDVs ilimitados",
       "Versão gratuita/teste disponível"
     ],
     description: "PDV Completo para seu estabelecimento",
